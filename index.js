@@ -21,6 +21,7 @@ app.listen(port, console.log("this port is runnig"));
 app.get("/users",TestMiddleWere, async (req,res) => {
   try {
     const mongoUsers= await userlist.find()
+    console.log(mongoUsers);
     res.send(mongoUsers)
   } catch (error) {
     console.log(error);
